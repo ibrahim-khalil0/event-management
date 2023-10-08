@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+.active{
+    color: #EDB602;
+    border-bottom: 2px solid #EDB602;
+    padding-bottom: 5px;
+}
+
+*{
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-bar a:hover{
+    color: #EDB602;
+    border-bottom: 2px solid #EDB602;
+    padding-bottom: 5px;
+}

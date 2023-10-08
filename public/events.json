@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Elegant Affairs Wedding Planning",
+      "description": "Create timeless memories with our expert team of wedding planners. At Elegant Affairs, we believe every wedding is unique and should reflect the couple's style and personality. Our experienced planners work closely with you to understand your vision and bring it to life. From venue selection and decor to coordinating vendors and managing the timeline, we handle every detail with precision and care. Your special day will be stress-free and exquisite, allowing you to enjoy every moment with your loved ones.",
+      "price": "$5000",
+      "image": "https://www.thedesibride.com/images/vendor_1_20220419131506.png"
+    },
+    {
+      "id": 2,
+      "title": "Blissful Beginnings Wedding Coordination",
+      "description": "Let us turn your dreams into reality with Blissful Beginnings Wedding Coordination. Our dedicated coordinators meticulously plan every aspect of your wedding, providing seamless execution and personalized touches that make your day truly special. From budget management and vendor coordination to timeline creation and on-site supervision, we handle it all. With our expertise, you can relax and savor the joy of your wedding day, knowing that every detail is taken care of.",
+      "price": "$3500",
+      "image": "https://static.wixstatic.com/media/451fdc_8b696c7b175e4a3aa1c6f509202bc457~mv2.png/v1/fill/w_640,h_496,fp_0.50_0.50,lg_2,q_85,usm_0.66_1.00_0.01,enc_auto/451fdc_8b696c7b175e4a3aa1c6f509202bc457~mv2.png"
+    },
+    {
+      "id": 3,
+      "title": "Love in Bloom Event Design",
+      "description": "Transform your wedding venue into a magical wonderland with Love in Bloom Event Design. Our creative team specializes in floral arrangements, decor, and lighting that create a captivating ambiance for your celebration. Whether you envision a romantic garden setting or a glamorous ballroom, we customize every detail to match your theme and style. With our artistic touch, your wedding venue will be a visual masterpiece, leaving a lasting impression on you and your guests.",
+      "price": "$2000",
+      "image": "https://www.eivans.com/wp-content/uploads/2023/06/Lepore_0303.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Sweet Serenity Destination Weddings",
+      "description": "Plan your dream destination wedding stress-free with Sweet Serenity Destination Weddings. Our experienced team specializes in organizing stunning weddings in exotic locations around the world. We handle all aspects of your destination wedding, including travel arrangements, accommodations, local logistics, and legal requirements. Whether you dream of a beachfront ceremony or a charming villa celebration, we make sure your destination wedding is a seamless and unforgettable experience.",
+      "price": "$7500",
+      "image": "https://mymendozawedding.com/wp-content/uploads/2021/06/13-10-18BodaLaura-ArturoBasil-6979.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Forever After Photography & Videography",
+      "description": "Capture every precious moment of your wedding day with Forever After Photography & Videography. Our skilled photographers and videographers have a keen eye for detail and a passion for storytelling. We capture candid moments, emotional exchanges, and beautiful portraits that encapsulate the essence of your love story. With our high-quality images and cinematic videos, you can relive the magic of your wedding day for years to come.",
+      "price": "$3000",
+      "image": "https://sunrisemmp.com/wp-content/uploads/2020/09/Wedding-Day-Photography.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Culinary Creations Catering",
+      "description": "Delight your guests with exquisite culinary experiences from Culinary Creations Catering. Our talented chefs create mouthwatering dishes using the finest ingredients, ensuring a culinary journey that tantalizes the taste buds. From gourmet appetizers and main courses to decadent desserts, our catering services offer a diverse menu selection to suit every palate. With our exceptional cuisine and impeccable service, your wedding reception will be a gastronomic delight that leaves a lasting impression.",
+      "price": "$45/p",
+      "image": "https://www.weddingsutra.com/images/Vendor_Images/Catering/gyanjee-caterers/gyanjee-caterers-10.jpg"
+    }
+  ]
+  
