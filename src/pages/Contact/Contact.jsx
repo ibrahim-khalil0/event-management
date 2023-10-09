@@ -9,7 +9,7 @@ const Contact = () => {
             <div className='text-black shadow-lg shadow-slate-200'>
                 <Header></Header>
             </div>
-            <div className='w-[90%] mx-auto grid grid-cols-2 pt-16 items-center'>
+            <div className='w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 pt-16 items-center space-y-8'>
                 <div>
                     <img src={contact1} alt="" className='w-full' />
                 </div>
@@ -44,23 +44,23 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className='w-[90%] mx-auto grid grid-cols-2 mb-16 items-center'>
-            <div className='pl-14'>
+            <div className='w-[90%] mx-auto flex flex-col-reverse lg:grid grid-cols-2 mb-16 items-center'>
+                <div className='pl-0 lg:pl-14'>
                     <h1 className='text-4xl'>Subscribe Our Newsletter</h1>
                     <hr className='border-[#EDB602] w-[80px] border-2 mt-4'/>
                     <div className="mt-10">
                         <form>
-                            <input type="text" placeholder="Your Name" className="border-[#EDB602] rounded-md border-2 w-3/4 outline-0 py-2 px-3 text-xl"/>
+                            <input type="text" placeholder="Your Name" className="border-[#EDB602] rounded-md border-2 w-full lg:w-3/4 outline-0 py-2 px-3 text-xl"/>
                             <br /><br></br>
-                            <input type="email" name="" id="" placeholder="Your Email" className="border-[#EDB602] rounded-md border-2 w-3/4 outline-0 py-2 px-3 text-xl"/>
+                            <input type="email" name="" id="" placeholder="Your Email" className="border-[#EDB602] rounded-md border-2 w-full lg:w-3/4 outline-0 py-2 px-3 text-xl"/>
                             <br /><br />
-                            <textarea name="" id="" cols="30" rows="5" placeholder="Write Your Comments" className="border-[#EDB602] rounded-md border-2 w-3/4 outline-0 py-2 px-3 text-xl"></textarea>
+                            <textarea name="" id="" cols="30" rows="5" placeholder="Write Your Comments" className="border-[#EDB602] rounded-md border-2 w-full lg:w-3/4 outline-0 py-2 px-3 text-xl"></textarea>
                             <br />
                             <input type="submit" name="" id="" value="Submit" className="bg-[#EDB602] px-5 py-2 rounded-md text-xl text-white"/>
                         </form>
                     </div>
                 </div>
-                <div>
+                <div className="mb-8 mt-8">
                     <img src={contact2} alt="" className='w-full' />
                 </div>
             </div>

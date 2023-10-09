@@ -16,7 +16,7 @@ const OtherServices = () => {
                 </div>
             </div>
 
-            <div className='w-[90%] grid grid-cols-3 mx-auto gap-8 mb-10'>
+            <div className='w-[90%] grid grid-cols-1 lg:grid-cols-3 mx-auto gap-8 mb-10'>
                 <div className='space-y-10 pl-10'>
                     <div className='grid place-items-end text-right'>
                         <h3 className='text-xl font-semibold text-gray-600'>WEDDINGS</h3>

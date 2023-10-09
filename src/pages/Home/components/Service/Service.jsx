@@ -6,7 +6,7 @@ const Service = ({service}) => {
     return (
         <div className='space-y-6 bg-[#edb60229] rounded-lg'>
             <img src={image} alt="" className='w-full h-[250px] rounded-t-md'/>
-            <div className='space-y-3 px-6 pb-8 flex flex-col h-[330px]'>
+            <div className='space-y-3 px-6 pb-8 flex flex-col lg:h-[330px]'>
                 <div>
                     <h1>{title}</h1>
                 </div>

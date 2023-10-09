@@ -11,7 +11,7 @@ const Header = () => {
         logOut()
     }
     return (
-        <div className='flex justify-between items-center py-2 w-[90%] mx-auto z-20 relative'>
+        <div className='flex flex-col space-y-6 lg:flex-row justify-between items-center py-2 lg:w-[90%] sm:px-5 lg:px-0 px-0 mx-auto z-20 relative'>
             <div>
                 <img className='w-[150px]' src={logo} alt="" />
             </div>
