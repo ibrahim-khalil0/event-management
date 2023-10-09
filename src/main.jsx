@@ -14,12 +14,14 @@ import Register from './pages/Register/Register';
 import OtherServices from './pages/OtherServices/OtherServices';
 import AuthProviders from './providers/AuthProviders';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Error from './pages/Error/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",

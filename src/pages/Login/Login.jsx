@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from '../../sharedComponents/Header/Header';
 import { AuthContext } from '../../providers/AuthProviders';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-    const {signIn} = useContext(AuthContext)
+    const {signIn, signInWithGoogle} = useContext(AuthContext)
 
     const location = useLocation()
     console.log(location)
@@ -19,7 +21,32 @@ const Login = () => {
 
         signIn(email, password)
         .then( (result) => {
-            navigate(location?.state ? location.state : '/')
+            toast('Login Successfully Completed')
+            
+            const setToast = () => {
+                navigate(location?.state ? location.state : '/')
+            }
+            setTimeout(function(){
+                setToast()
+            }, 2000)
+        })
+        .catch( error => {
+            console.log(error.message)
+        })
+
+        
+    }
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+        .then( (result) => {
+            toast('Login Successfully Completed')
+            
+            const setToast = () => {
+                navigate(location?.state ? location.state : '/')
+            }
+            setTimeout(function(){
+                setToast()
+            }, 2000)
         })
     }
     return (
@@ -43,9 +70,10 @@ const Login = () => {
                     </form>
                     <h1 className='text-xl py-5'>Don't have an account? <Link to={'/register'}><span className='text-[#EDB602]'>Sign Up</span></Link></h1>
                     <h1 className='text-xl'>Or</h1>
-                    <button className='border-[1px] border-[#EDB602] rounded-md text-xl w-full py-2 my-5 '>Login With Google</button>
+                    <button onClick={handleGoogleLogin} className='border-[1px] border-[#EDB602] rounded-md text-xl w-full py-2 my-5 '>Login With Google</button>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

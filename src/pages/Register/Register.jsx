@@ -1,12 +1,19 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../sharedComponents/Header/Header';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
-    const {createNewUser, user} = useContext(AuthContext)
+    const {createNewUser, signInWithGoogle} = useContext(AuthContext)
+    const [error, setError] = useState(null)
+
+
+    const navigate = useNavigate()
 
     const handleRegister = e => {
         e.preventDefault();
@@ -15,14 +22,38 @@ const Register = () => {
         const password = form.get('password')
         const name = form.get('name')
         const photo = form.get('photo')
+
+        if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d).{6,}$/.test(password)){
+            setError('Password will be minimum 6 character, one Uppercase letter, one special character and one number')
+            return
+        }
         
 
         createNewUser(email, password)
-        .then(result => {
-            console.log(result.user)
+        .then( (result) => {
+            toast('Register Successfully Completed')
+
+            updateProfile(result.user, {
+                displayName: name,
+                photoURL: photo
+            })
+            
+            
+            const setToast = () => {
+                navigate(location?.state ? location.state : '/')
+            }
+            setTimeout(function(){
+                setToast()
+            }, 2000)
         })
         .catch(error => {
             console.error(error)
+        })
+    }
+    const handleGoogleRegister = () => {
+        signInWithGoogle()
+        .then( (result) => {
+            navigate(location?.state ? location.state : '/')
         })
     }
 
@@ -46,11 +77,15 @@ const Register = () => {
                         
                         <input type="submit" name="" id="" className='bg-[#EDB602] w-full rounded-md text-2xl px-4 py-2 text-white cursor-pointer' />
                     </form>
+                    {
+                        error && <p className='text-red-500'>{error}</p>
+                    }
                     <h1 className='text-xl py-5'>Already have an account? <Link to={'/login'}><span className='text-[#EDB602]'>Login</span></Link></h1>
                     <h1 className='text-xl'>Or</h1>
-                    <button className='border-[1px] border-[#EDB602] rounded-md text-xl w-full py-2 my-5 '>Login With Google</button>
+                    <button onClick={handleGoogleRegister} className='border-[1px] border-[#EDB602] rounded-md text-xl w-full py-2 my-5 '>Login With Google</button>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

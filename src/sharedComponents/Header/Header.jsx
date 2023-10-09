@@ -1,10 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
+import { FaUserCircle } from "react-icons/fa";
 import logo from '../../assets/logo1.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
 
 const Header = () => {
     const {user, logOut} = useContext(AuthContext)
+    console.log(user)
     const handleSignOut = () => {
         logOut()
     }
@@ -21,9 +23,18 @@ const Header = () => {
             <div>
                 {
                     user ?
-                    <button onClick={handleSignOut} className='bg-[#EDB602] text-white rounded-md px-5 py-2 text-2xl'>Sign Out</button>
+                        <div className='items-center mr-2 flex'>
+                            <div>
+                                <img src={user?.photoURL} alt="" className='w-[40px] rounded-full'/>
+                            </div>
+                            <div>
+                                <p className='text-base'><span>{user?.displayName}</span> <span onClick={handleSignOut} className='bg-[#EDB602] py-1 px-2 rounded-md cursor-pointer ml-2 text-white'>Log Out</span></p>
+                                <p className='text-base'>{user?.email}</p>
+                            </div>
+                        </div>
                     :
                     <Link to={'/login'} className='bg-[#EDB602] text-white rounded-md px-5 py-2 text-2xl'>Login</Link>
+                    
                 }
             </div>
         </div>
