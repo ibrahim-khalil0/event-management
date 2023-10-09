@@ -21,7 +21,7 @@ const Details = () => {
                 <div className='flex justify-between my-8 items-center'>
                     <h1 className='text-5xl'>{title}</h1>
                 </div>
-                <p className='text-xl leading-10'>{description}</p>
+                <p className='text-xl leading-10 mb-10'>{description}</p>
             </div>
         </div>
     );

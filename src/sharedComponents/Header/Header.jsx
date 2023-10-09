@@ -1,7 +1,13 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo1.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const Header = () => {
+    const {user, logOut} = useContext(AuthContext)
+    const handleSignOut = () => {
+        logOut()
+    }
     return (
         <div className='flex justify-between items-center py-2 w-[90%] mx-auto z-20 relative'>
             <div>
@@ -13,7 +19,12 @@ const Header = () => {
                 <NavLink to={'/service'}>Other Services</NavLink>
             </div>
             <div>
-                <Link to={'/login'} className='bg-[#EDB602] text-white rounded-md px-5 py-2 text-2xl'>Login</Link>
+                {
+                    user ?
+                    <button onClick={handleSignOut} className='bg-[#EDB602] text-white rounded-md px-5 py-2 text-2xl'>Sign Out</button>
+                    :
+                    <Link to={'/login'} className='bg-[#EDB602] text-white rounded-md px-5 py-2 text-2xl'>Login</Link>
+                }
             </div>
         </div>
     );
