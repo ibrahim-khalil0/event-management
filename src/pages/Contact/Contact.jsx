@@ -6,10 +6,10 @@ import contact2 from '../../assets/contact2.jpg'
 const Contact = () => {
     return (
         <div>
-            <div className='text-black'>
+            <div className='text-black shadow-lg shadow-slate-200'>
                 <Header></Header>
             </div>
-            <div className='w-[90%] mx-auto grid grid-cols-2 pt-6 items-center'>
+            <div className='w-[90%] mx-auto grid grid-cols-2 pt-16 items-center'>
                 <div>
                     <img src={contact1} alt="" className='w-full' />
                 </div>
@@ -44,7 +44,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className='w-[90%] mx-auto grid grid-cols-2 items-center'>
+            <div className='w-[90%] mx-auto grid grid-cols-2 mb-16 items-center'>
             <div className='pl-14'>
                     <h1 className='text-4xl'>Subscribe Our Newsletter</h1>
                     <hr className='border-[#EDB602] w-[80px] border-2 mt-4'/>

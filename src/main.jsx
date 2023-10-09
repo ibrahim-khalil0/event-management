@@ -9,6 +9,9 @@ import Home from './pages/Home/Home';
 import Root from './Root/Root';
 import Details from './pages/Details/Details';
 import Contact from './pages/Contact/Contact';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import OtherServices from './pages/OtherServices/OtherServices';
 
 
 const router = createBrowserRouter([
@@ -22,8 +25,16 @@ const router = createBrowserRouter([
         loader: () => fetch('/events.json')
       },
       {
+        path: "service",
+        element: <OtherServices></OtherServices>
+      },
+      {
         path: "/login",
-        element: <div>login</div>
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
       {
         path: "/details/:id",

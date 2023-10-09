@@ -4,7 +4,7 @@ import team3 from '../../../../assets/team-image-7.jpg'
 
 const Team = () => {
     return (
-        <div className='w-[90%] mx-auto text-center space-y-5'>
+        <div className='w-[90%] mx-auto text-center space-y-5 mb-10'>
             <h1 className='text-5xl'>Meet Our Awesome Team</h1>
             <p className='text-lg md:px-40'>Meet the passionate professionals behind Wedding Management. With creativity and precision, our dedicated team turns your dreams into unforgettable weddings. Get to know the faces behind the magic, committed to making your special day truly extraordinary.</p>
             <div className='grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-14'>
