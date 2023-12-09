@@ -1,3 +1,4 @@
+## Live Link: https://65241c2eb00b0802d6025670--shimmering-marzipan-9fa06e.netlify.app
 - This website is a wedding ceremony related website. Here a user can book the event of his choice.
 - Added login and registration system to the website. The user can login to the website using his Google account.
 - Users can register on the website with their name, photo, Gmail and password.
